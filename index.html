@@ -365,13 +365,14 @@
               <form
                 action="https://formsubmit.co/f8cd339f1bb4dcc8b4250e7518d10e0a"
                 method="POST"
-                onclick="alert()"
               >
                 <!-- Honeypot -->
                 <input type="text" name="_honey" style="display: none" />
 
                 <!-- Disable Captcha -->
                 <input type="hidden" name="_captcha" value="false" />
+
+                <input type="hidden" name="_next" value="alert()" />
 
                 <input type="text" name="name" placeholder="Enter Your Name" />
 
