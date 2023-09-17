@@ -5,12 +5,13 @@ function toggleMenu(){
     icon.classList.toggle("open");
 }
  function alert(){
-   message => {
-    if(message == 'OK'){
-        swal("Good job!", "You clicked the button!", "success");
-    }
-    else{
-        swal("Ups, this went bad!", "You clicked the button!", "error");
-    }
-   }
+    swal("Good job!", "You clicked the button!", "success");
+//    message => {
+//     if(message == 'OK'){
+//         swal("Good job!", "You clicked the button!", "success");
+//     }
+//     else{
+//         swal("Ups, this went bad!", "You clicked the button!", "error");
+//     }
+//    }
  }
