@@ -445,10 +445,11 @@ textarea{
     transition: 0.3s ease;
     font-family: 'Poppins', sans-serif;
 }
-.contact-form input:focus{
+.contact-form input:focus, textarea:focus {
     background: transparent;
-    border: 1px solid #69275c;
+    border: 1px solid rgb(53,53,53);
 }
+
 /* .contact-form button{
     font-size: 18px;
     color: #fff;
@@ -460,3 +461,13 @@ textarea{
     border: 1px solid #69275c;
 
 } */
+
+/*THANKS*/
+.tanks {
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px;
+    width: 400px;
+    margin-top: 4rem;
+    box-shadow: #777777;
+}
