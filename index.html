@@ -372,6 +372,12 @@
                 <!-- Disable Captcha -->
                 <input type="hidden" name="_captcha" value="false" />
 
+                <input
+                  type="hidden"
+                  name="_next"
+                  value="alert();return false"
+                />
+
                 <input type="text" name="name" placeholder="Enter Your Name" />
 
                 <input
@@ -385,11 +391,7 @@
                   placeholder="Your Message"
                 ></textarea>
                 <div class="btn-container">
-                  <button
-                    class="btn btn-color-2 project-btn"
-                    type="submit"
-                    onsubmit="alert()"
-                  >
+                  <button class="btn btn-color-2 project-btn" type="submit">
                     Send Message
                   </button>
                 </div>
