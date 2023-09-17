@@ -4,16 +4,13 @@ function toggleMenu(){
     menu.classList.toggle("open");
     icon.classList.toggle("open");
 }
- function emailSend(){
-    Email.send({
-        Host : "smtp.elasticemail.com",
-        Username : "username",
-        Password : "password",
-        To : '',
-        From : '',
-        Subject : "",
-        Body : ""
-    }).then(
-        message => alert(message)
-    );
+ function alert(){
+   message => {
+    if(message == 'OK'){
+        swal("Good job!", "You clicked the button!", "success");
+    }
+    else{
+        swal("Ups, this went bad!", "You clicked the button!", "error");
+    }
+   }
  }
