@@ -4,13 +4,13 @@ function toggleMenu(){
     menu.classList.toggle("open");
     icon.classList.toggle("open");
 }
-//  function alert(){
-//    message => {
-//     if(message == 'OK'){
-//         swal("Good job!", "You clicked the button!", "success");
-//     }
-//     else{
-//         swal("Ups, this went bad!", "You clicked the button!", "error");
-//     }
-//    }
-//  }
+ function alert(){
+   message => {
+    if(message == 'OK'){
+        swal("Good job!", "You clicked the button!", "success");
+    }
+    else{
+        swal("Ups, this went bad!", "You clicked the button!", "error");
+    }
+   }
+ }
