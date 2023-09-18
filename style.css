@@ -476,4 +476,8 @@ textarea{
     width: 400px;
     margin-top: 4rem;
     box-shadow: #777777;
+    
+}
+.text-container p {
+ text-align: justify;
 }
