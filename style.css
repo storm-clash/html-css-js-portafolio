@@ -3,6 +3,15 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
+  :root {
+    --white: #ddd;
+    --dark: #111;
+    --darkGrey: #474b4f;
+    --lightGrey: #6b6e70;
+    --lightGreen: #86c232;
+    --darkGreen: #61892f;
+    --transition: all 0.5s ease;
+  }
 
 *{
     margin: 0;
@@ -38,17 +47,37 @@ nav{
     gap: 2rem;
     list-style: none;
     font-size: 1.5rem;
+    transition: var(--transition);
 }
 a{
     color: black;
     text-decoration: none;
     text-decoration-color: white;
+    position: relative;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    display: block;
+}
+ a::after {
+    content: "";
+    height: 2px;
+    background: var(--lightGreen);
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    transition: var(--transition);
+}
+a:hover::after {
+    width: 100px;
 }
 a:hover{
     color: gray;
-    text-decoration:underline ;
     text-underline-offset: 1rem;
     text-decoration-color: rgb(181, 181, 181);
+    transition: var(--transition);
 
 }
 .logo{
@@ -173,9 +202,19 @@ section{
 }
 #socials-container{
     display: flex;
+    
     justify-content: center;
     margin-top: 1rem;
     gap: 1rem;
+}
+#socials-container img {
+    border-radius: 50%;
+}
+#socials-container img:hover {
+    background: var(--lightGreen);
+    border-color: var(--lightGreen);
+    transition: var(--transition);
+    box-shadow: 0px 0px 14px -1px rgba(0, 0, 0, 0.75);
 }
 
 /*ICONS*/
@@ -209,16 +248,28 @@ section{
 .btn-color-2:hover {
     background: rgb(53,53,53);
     color: white;
+    
 }
 .btn-color-1:hover{
-    background: rgb(0,0,0);
+    background: #fff;
+    color: #111;
+    text-transform: uppercase;
+    border: 2px solid var(--dark);
+    transition: var(--transition);
+    width: 11rem;
+    box-shadow: 0px 0px 14px -1px rgba(0, 0, 0, 0.75);
 }
 
 .btn-color-2{
     background: none;
 }
 .btn-color-2:hover{
-    border: rgb(255,255,255) 0.1rem solid;
+    border: 2px solid var(--darkGreen);
+    text-transform: uppercase;
+    border: 2px solid var(--darkGreen);
+    transition: var(--transition);
+    width: 11rem;
+    box-shadow: 0px 0px 14px -1px rgba(0, 0, 0, 0.75);
 }
 .btn-container{
     gap: 1rem;
@@ -237,6 +288,7 @@ section{
     justify-content: center;
     flex-direction: column;
 }
+
 .about-containers,
 .about-details-container {
     display: flex;
@@ -259,6 +311,9 @@ section{
     border-color: rgb(163,163,163);
     text-align: center;
 }
+.details-container:hover {
+    box-shadow: 0px 0px 14px -1px rgba(0, 0, 0, 0.75);
+}
 
 .section-container {
     gap: 4rem;
@@ -269,6 +324,14 @@ section{
     height: 400px;
     width: 400px;
     margin: auto 0;
+    
+}
+.personal-pic {
+    box-shadow: 0px 0px 14px -1px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 14px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow:0px 0px 14px -1px rgba(0, 0, 0, 0.75);
+    border-radius: 50%;
+    border-color: var(--lightGreen);
 }
 
 /*EXPERIENCE SECTION*/
@@ -289,24 +352,25 @@ section{
 }
 .article-container {
     display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
     text-align: initial;
     flex-wrap: wrap;
-    flex-direction: row;
     gap: 2.5rem;
     justify-content: space-around;
 }
 article {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
     width: 10rem;
-    justify-content: space-around;
-    gap: 0.5rem;
+    justify-content: space-between;    
 }
+
 article .icon {
     cursor: default;
 }
-#p{
-    padding-right: 1.2rem;
-}
+
 /*PROJECTS SECTION*/
 #projects {
     position: relative;
@@ -386,7 +450,7 @@ footer p {
     text-align: center;
     font-size: 2.5rem;
     font-weight: 400;
-    color: #fff;
+    color: var(--dark);
    
 }
 .contact-form h2{
@@ -444,11 +508,11 @@ textarea{
     color: #999;
     padding: 14px 20px;
     width: 100%;
-    display: inline-block;
+    display: block;
     box-sizing: border-box;
-    border: none;
+    
     background: rgb(240,240,240);
-    transition: 0.3s ease;
+    transition: var(--transition);
     font-family: 'Poppins', sans-serif;
 }
 .contact-form input:focus, textarea:focus {
@@ -481,3 +545,6 @@ textarea{
 .text-container p {
  text-align: justify;
 }
+
+
+
