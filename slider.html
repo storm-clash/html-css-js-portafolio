@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="slider.css" /> 
+    <title>Document</title>
+</head>
+<body>
+    <section id="projects">
+        <div class="body">
+          <!-- Slider container to hold and control the slides -->
+          <div class="slider-container">
+              <!-- Slider element containing individual slides -->
+              <div class="slider" id="slider">
+                  <!-- Slide element with an image and a header -->
+                  <div class="slide">
+                    <div class="details-container color-container">
+                      <div class="article-container">
+                        <img
+                          src="./assets/picfinal.jpg"
+                          alt="Project portfolio"
+                          class="project-img"
+                        />
+                      </div>
+                      <h2 class="experience-sub-title project-title">Portfolio</h2>
+                      <div class="btn-container">
+                        <button
+                          class="btn btn-color-2 project-btn"
+                          onclick="location.href='https://github.com/storm-clash/portafolio'"
+                        >
+                          Github
+                        </button>
+                      </div>
+                    </div>
+                      <h3>1</h3>
+                  </div>
+                  <div class="slide">
+                      <img src="https://placehold.co/400" alt="Slide 2" />
+                      <h3>2</h3>
+                  </div>
+                  <div class="slide">
+                      <img src="https://placehold.co/400" alt="Slide 3" />
+                      <h3>3</h3>
+                  </div>
+                  <div class="slide">
+                      <img src="https://placehold.co/400" alt="Slide 4" />
+                      <h3>4</h3>
+                  </div>
+                  <div class="slide">
+                      <img src="https://placehold.co/400" alt="Slide 5" />
+                      <h3>5</h3>
+                  </div>
+                  <div class="slide">
+                      <img src="https://placehold.co/400" alt="Slide 6" />
+                      <h3>6</h3>
+                  </div>
+                  <div class="slide">
+                      <img src="https://placehold.co/400" alt="Slide 7" />
+                      <h3>7</h3>
+                  </div>
+                  <!-- Add more slides if needed -->
+              </div>
+               <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <script src="slider.js"></script>
+        </div>
+       </section>
+    
+</body>
+</html>
