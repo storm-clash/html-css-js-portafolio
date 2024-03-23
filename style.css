@@ -262,6 +262,7 @@ section{
 
 .btn-color-2{
     background: none;
+    color:#111;
 }
 .btn-color-2:hover{
     border: 2px solid var(--darkGreen);
